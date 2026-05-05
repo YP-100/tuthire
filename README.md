@@ -116,7 +116,7 @@ OR
 
 ---
 
-### 👥 Admin Panel Users
+### 👥 Admin Panel
 ![Admin Panel](screenshots/admin-dashboard.png)
 
 ---
