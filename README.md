@@ -111,12 +111,13 @@ OR
 
 ## 📸 Screenshots
 
-*(Add images later)*
-
-```
+### 🏠 Dashboard
 ![Dashboard](screenshots/dashboard.png)
+
+---
+
+### 👥 Admin Panel Users
 ![Admin Panel](screenshots/admin-dashboard.png)
-```
 
 ---
 
