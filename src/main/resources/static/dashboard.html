@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 id="welcome" style="user-select: none"></h2>
+    <h3 style="user-select: none">Featured Teachers</h3>
+    <div id="teachers"></div>
+    <h3 style="user-select: none">Your Requests</h3>
+    <div id="requests"></div>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- CHATBOT -->
+<div id="chatbot-container">
+
+  <div id="chatbot-toggle" onclick="toggleChat()">
+    🤖
+  </div>
+
+  <div id="chatbot-box" style="display: none;">
+
+    <div class="chat-header">
+      <span>TutHire Assistant</span>
+      <button onclick="toggleChat()">X</button>
+    </div>
+
+    <div id="chat-messages"></div>
+
+
+  </div>
+
+</div>
+
+<script src="js/chatbot.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

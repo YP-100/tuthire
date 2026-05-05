@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="teach-container">
+
+    <h2>Teacher Profile</h2>
+
+    <div id="teacherDetails"></div>
+
+    <button onclick="goToAvailability()" style="width: 150px;">View Availability</button>
+    <button onclick="goTODashboard()" style="width: 150px; margin-top: 10px;">close</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h3 id="modalTitle"></h3>
+        <div id="modalBody"></div>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+</div>
+
+
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/teacher.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - TutHire</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="logcontainer flex-down">
+    <div style="user-select: none">
+    <h2>TutHire Register</h2>
+    </div>
+
+    <div>
+    <form id="registerForm">
+        <div class="flex-down">
+        
+        
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        
+        <input type="email" id="email" placeholder="Email" required>
+        
+        <input type="password" id="password" placeholder="Password" required>
+        
+        
+        <input type="text" id="loginName" placeholder="Login Name" required>
+        
+        <input type="tel" id="contact" placeholder="Contact (10 digits)"  pattern="[0-9]{10}" maxlength="10" inputmode="numeric"  required>
+        
+        <input type="text" id="address" placeholder="Address" required>
+        
+        <select id="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="T">Other</option>
+        </select>
+
+        <select id="role" onchange="toggleTeacherFields()">
+            <option value="students">Student</option>
+            <option value="teachers">Teacher</option>
+            </select
+            
+            <!-- Teacher only fields -->
+        <div id="teacherFields" style="display:none; text-align: center;">
+            <input type="text" id="subjects" placeholder="Subjects (e.g. java,python)">
+            <input type="text" id="standards" placeholder="Standards (e.g. 10,11,12)">
+            <input type="number" id="amount" placeholder="Enter amount per session">
+        </div>
+
+        <div class="loginbtncon">
+        <button type="submit" class="loginbtn">Register</button>
+        </div>
+        <p style="user-select: none">already registered? <a href="login.html">login</a></p>
+
+        <p id="error"></p>
+        </div>
+        
+    </form>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

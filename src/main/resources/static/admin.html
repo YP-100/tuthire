@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <button onclick="showSection('teachers')">Teachers</button>
+    <button onclick="showSection('students')">Students</button>
+    <button onclick="showSection('hirings')">Hirings</button>
+    <button onclick="showSection('feedbacks')">Feedbacks</button>
+    <button onclick="showSection('payments')">Approvals</button>
+    <button onclick="showSection('faq')">Chatbot FAQ</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <h2>Admin Dashboard</h2>
+
+    <div id="teachers" class="section grid"></div>
+    <div id="students" class="section grid"></div>
+    <div id="feedbacks" class="section grid"></div>
+    <div id="hirings" class="section grid"></div>
+    <div id="payments" class="section grid"></div>
+    <div id="faq" class="section grid"></div>
+
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/admin.js"></script>
+
+
+</body>
+</html>

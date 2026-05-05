@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage Availability</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  
+
+<div class="container" style="user-select: none">
+
+  <h2>Manage Availability</h2>
+
+  
+
+  <button onclick="openAddModal()">+ Add Slot</button>
+
+  <div id="slots" class="grid"></div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/addAvailability.js"></script>
+
+</body>
+</html>

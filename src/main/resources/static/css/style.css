@@ -1,0 +1,553 @@
+/* ===== GLOBAL ===== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-attachment: fixed;
+  margin: 0;
+  color: #333;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  margin:  auto;
+  padding: 20px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.1), transparent);
+  pointer-events: none;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: stretch;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar div {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar button {
+  background: white;
+  color: black;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-weight: bold;
+}
+
+.navbar button:hover {
+  background: #ddd;
+}
+
+/*   login/reg   */
+.logcontainer {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(68, 44, 133, 0.3); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  color: black;
+}
+
+.loginbtn {
+  background: white;
+  color: black;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-weight: bold;
+  width: 200px;
+}
+
+.loginbtn:hover {
+  background: #ddd;
+}
+
+.loginbtncon {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== INPUTS ===== */
+input, select {
+  width: 300px;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+/* ===== CARDS =====
+.card, .teacher-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card:hover, .teacher-card:hover {
+  transform: translateY(-5px);
+} */
+
+/* ===== CARDS (UPGRADED) ===== */
+.card, .teacher-card {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  padding: 18px;
+  margin: 10px;
+  width: 230px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.card:hover, .teacher-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* ===== CARD TEXT ===== */
+.card h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ===== PRICE STYLE ===== */
+.card .price {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* ===== TAGS (SUBJECTS) ===== */
+.tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin: 2px;
+  color: white;
+}
+
+/* ===== GRID ===== */
+#teachers, #requests, #slots, #results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* ===== BUTTON ===== */
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100px;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+
+/* ===== STATUS BADGES ===== */
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: white;
+}
+
+.PENDING { background: orange; }
+.ACCEPTED { background: green; }
+.REJECTED { background: red; }
+.COMPLETED { background: blue; }
+
+/* ===== MODAL ===== */
+
+#modalBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  margin: 10% auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+/* ===== PROFILE ===== */
+#profile p {
+  background: white;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+}
+
+
+/* ===== sidebar admin ===== */
+
+.admin-layout {
+  display: block;
+}
+
+
+.sidebar {
+  width: 220px;
+  background: #111827;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 12;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  background: #1f2937;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar button:hover {
+  background: #2563eb;
+}
+
+/* .main-content {
+  flex: 1;
+  padding: 20px;
+} */
+
+.main-content {
+  margin-left: 250px; 
+  padding: 20px;
+}
+
+.section {
+  display: none;
+}
+
+/* ===== extras ===== */
+
+#students{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.flex-down{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.margin-up150{
+  margin-top: 150px;
+}
+
+.margin-up10{
+  margin-top: 10px;
+}
+
+.teach-container {
+    max-width: 500px;
+    margin: 150px auto;
+    padding: 20px;
+    background: rgba(121, 104, 104, 0.3); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(64, 63, 63, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+#completed{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+#qrcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#qr{
+  height: 300px;
+  width: 300px
+}
+
+#profile p {
+  color: #775bb4;
+  font-size: 16px;
+}
+
+
+/* chatbot */
+
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  user-select: none;
+}
+
+#chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4f75fe, #69b4f6);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+  transition: all 0.3s ease;
+}
+
+#chatbot-toggle:hover {
+  transform: scale(1.1);
+}
+
+#chatbot-box {
+  width: 300px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-top: 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.chat-header {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.chat-input button {
+  padding: 8px;
+}
+
+.chat-header button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;
+  padding: 0 8px;
+}
+
+.chat-header button:hover {
+  color: #ddd;
+}
+
+#chat-messages {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f5f5f5; 
+  color: black;
+}
+
+.chat-option {
+  display: block;
+  margin: 6px 0;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+}
+
+.chat-option:hover {
+  background: #1e40af;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  margin: 6px 0;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-bubble.bot {
+  background: #e5e7eb;
+  color: black;
+  align-self: flex-start;
+}
+
+.chat-bubble.user {
+  background: #2563eb;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.add-faq-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #69b4f6, #4f75fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-top : 50px;
+}
+
+/* hover effect */
+.add-faq-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}

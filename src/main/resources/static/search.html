@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Teachers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Search Teachers</h2>
+
+    <input type="text" id="subject" placeholder="Enter subject">
+    <input type="text" id="standard" placeholder="Enter standard">
+
+    <button onclick="searchTeachers()">Search</button>
+
+    <div id="results"></div>
+</div>
+
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

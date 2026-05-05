@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="logcontainer margin-up150">
+
+    <h2 style="user-select: none">Your Profile</h2>
+
+    <div id="profile"></div>
+
+    <div class="loginbtncon"> 
+    <button onclick="editProfile()">Edit Profile</button>
+    </div>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"> 
+    </div>
+    <button onclick="closeModal()" class="margin-up10">Close</button>
+    
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

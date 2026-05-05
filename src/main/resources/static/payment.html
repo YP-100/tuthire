@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - TutHire</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container" style="user-select: none">
+
+    <h2>Complete Payment</h2>
+
+    <div id="details"></div>
+    <div id="qrcon">
+      <img src="/images/qr.jpeg" width="200" id="qr">
+    </div>
+    <div style="text-align: center;">
+    <input type="text" id="txn" placeholder="Enter Transaction ID">
+
+    <button onclick="pay()">I Have Paid</button>
+    <button onclick="skip()" style="width: 120px;">Skip (Demo)</button>
+
+    </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/payment.js"></script>
+</body>
+</html>

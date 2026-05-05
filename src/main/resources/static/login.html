@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - TutHire</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="logcontainer flex-down">
+    <div style="user-select: none">
+    <h2>TutHire Login</h2>
+    </div>
+
+    <div>
+    <form id="loginForm">
+    <div class="flex-down">
+
+        <input type="email" id="email" placeholder="Enter Email" required>
+
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <select id="role">
+            <option value="students">Student</option>
+            <option value="teachers">Teacher</option>
+            <option value="admin">Admin</option>
+        </select>
+        <div class="loginbtncon">
+        <button type="submit" class="loginbtn">Login</button>
+        </div>
+        <p style="user-select: none">Don't have an account? <a href="register.html">Sign up</a></p>
+        <p id="error"></p>
+    </div>
+
+    </form>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
