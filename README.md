@@ -115,7 +115,7 @@ OR
 
 ```
 ![Dashboard](screenshots/dashboard.png)
-![Admin Panel](screenshots/admin.png)
+![Admin Panel](screenshots/admin-dashboard.png)
 ```
 
 ---
